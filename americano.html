@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Официальный сайт кофейни "Восход"</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="./js/button.js" defer></script>
+</head>
+<body>
+ <!-- Основной блок сайта -->
+    <div id="basic">
+     <!-- Шапка сайта -->
+    <div id="head-site">
+    <a href="/"><img src="images/logo.jpg" alt="Кофейня" title="Кофейня" /></a>
+	<div class="slogan">
+	<p><i>Начни свой день правильно!</i></p>
+    </div>
+	<!-- Верхнее меню сайта -->
+    <div id="menu-top">
+        <div class="bg-1">
+            <ul>
+            <li><a href="index.html">О нас</a></li>
+            <li><a href="coffee.html">Ассортимент</a></li>
+            <li><a href="order.html">Оформить заказ</a></li>
+            </ul>
+        </div>
+        <div class="bg-2"></div>
+    </div>
+	<!-- Левое меню и Контент -->
+            <div id="content">
+             
+            <!-- Контент - правый блок -->
+            <div class="right">
+                <h1>Кофе Американо</h1>
+				<h3>250 мл</br>
+				<div class="container">
+                <div class="box">
+                <div>Стоимость:</div>
+                <div id="price">90</div>
+                <div>руб.</div><h3>
+                </div>
+                </div>
+				
+                <h3><i>Американо – один из популярных кофейных напитков в мире. В его состав входит эспрессо разбавленный водой. При разбавлении эспрессо водой, напиток получается не такой крепкий и большего объема. Достаточно простой рецепт, но история его появления намного интересней.</h3></i>
+ 
+                <h3><i>Начнем с того, что в американцы любят некрепкий кофе. Поэтому у них популярен фильтр-кофе. Это кофе приготовленный путем проливания горячей воды через кофе и фильтр. Вода проливается вручную, а фильтр используется для фильтрации мелких частиц молотого кофе.</h3></i>
+                 
+				<h3><i>История американо начинается со времен Второй мировой войны. А именно, когда солдаты из Америки высадились в Италии. Они пытались найти полюбившийся им на родине напиток. У них не получалось, так как в Италии популярен эспрессо. Данный напиток не устраивал американцев своим малым объемом и большой крепостью.</h3></i>
+				 
+                <img src="images/americano.jpg" alt="" title="" style="margin-right:50px;" />
+                <img src="images/americano1.jpg" alt="" title="" style="margin-right:50px;" />
+                <img src="images/americano2.jpg" alt="" title="" />
+ 
+                <h3><i>Для решения этой проблемы, итальянцы решили разбавить эспрессо большим количеством воды. Получался некрепкий напиток большого объема, как и нравилось американцам. Назвали же получившийся напиток – американо. Данное название подчеркивало плохой вкус американцев.</h3></i>
+ 
+                <h3><i>Итальянцы и не догадывались, что придуманный ими напиток станет популярен во всей Европе.</h3></i>
+				
+				<h3><i>В чашке эспрессо или американо одинаковое количество кофеина. Однако в разбавленном водой напитке его концентрация меньше, что делает вкус более гармоничным. В базовом варианте в 100 мл ароматной жидкости содержатся 9,5 ккал, по 0,6 г белка и жира, 0,7 г углеводов. В ней присутствуют натрий, калий, магний, витамины группы PP, полиненасыщенные жирные кислоты. Добавки повышают калорийность и пищевую ценность напитка.</h3></i>
+				
+				<h3><i>Американо содержит достаточное количество воды, поэтому не вызывает обезвоживания. Его польза заключается в антиоксидантном и тонизирующем свойствах, легком мочегонном действии. Регулярное употребление (1-2 порции в день без добавок) ускоряет обмен веществ, способствует снижению веса.</h3></i>
+				
+				<script type="text/javascript">
+				function change(objName, min, max, step) {
+                var obj = document.getElementById(objName);
+                var tmp = +obj.value + step;
+                if (tmp<min) tmp=min;
+                if (tmp>max) tmp=max;
+                obj.value = tmp;
+                } 
+				$(document).ready(function(){
+                $("btn-default").click(function(){
+                id = $(this).attr("el");
+                tmp="#img"+id;
+                $(tmp)
+                .clone()
+                .css({'position' : 'absolute', 'z-index' : '11100', top: $(this).offset().top-300, left:$(this).offset().left-100})
+                .appendTo("body")
+                .animate({opacity: 0.5,
+                    left: $("#popup_basket").offset()['left'],
+                    top: $("#popup_basket").offset()['top'],
+                    width: 20}, 1000, function() {
+                    $(this).remove();
+                });
+                })
+                });
+				</script>
+				
+				<form>
+                <div id="shopping-cart">
+                <input id="amount" ENGINE="text" name="count" value="1" class="form-control form-number ">
+                <div class="btn-count btn-count-plus" value="+" onClick="change('amount',0,100, 1);">+</div>
+                <div class="btn-count btn-count-minus" value="-" onClick="change('amount',0,100,-1);">-</div>
+                </div>
+                <a href="#" class="btn-default">Купить</a>
+                </form>
+				<a href="coffee.html" class="btn-default">Обратно в меню</a>
+            </div>
+             
+            <!-- Левое меню - левый блок -->
+            <div class="left">
+                <div id="left-menu">
+                    <div class="block-nad-menu"></div>
+                    <div class="block-menu">
+                    <ul>
+                    <li><a href="ayrish.html">Кофе Айриш</a></li>
+                    <li><a href="americano.html">Кофе Американо</a></li>
+                    <li><a href="glyase.html">Кофе Глясе</a></li>
+                    <li><a href="doppio.html">Кофе Доппио</a></li>
+                    <li><a href="cappuccino.html">Кофе Капучино</a></li>
+                    <li><a href="konpanna.html">Кофе Кон Панна</a></li>
+                    <li><a href="koretto.html">Кофе Коретто</a></li>
+                    <li><a href="latte.html">Кофе Латте</a></li>
+                    <li class="none-bg"><a href="lungo.html">Кофе Лунго</a></li>
+                    </ul>
+                    </div>
+                    <div class="block-pod-menu"></div>
+                </div>
+            </div>
+			<div class="myclr"></div>
+        </div>
+		<!-- Подвал -->
+        <div id="podval">
+            <div class="yellow"></div>
+            <div class="p1"><i>ООО “Кофейня” <br/>
+            г. Верхняя Салда, ул. Энгельса, 97 <br/>
+			2021 год</i></div>
+			<div class="p2"><i>Контактный телефон:<br/>
+			+7 (950) 196-73-83<br/>
+			Часы работы:<br/>
+			Пн-пт: 9:00-19:00<br/>
+			Сб-вс: 10:00-18:00</i></div>
+            <div class="p3"><img src="images/icon.png" alt="" title="" /></div>
+        </div>
+        <div class="myclr"></div>
+    </div>	
+</body>
+</html>

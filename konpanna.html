@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Официальный сайт кофейни "Восход"</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="./js/button.js" defer></script>
+</head>
+<body>
+ <!-- Основной блок сайта -->
+    <div id="basic">
+     <!-- Шапка сайта -->
+    <div id="head-site">
+    <a href="/"><img src="images/logo.jpg" alt="Кофейня" title="Кофейня" /></a>
+	<div class="slogan">
+	<p><i>Начни свой день правильно!</i></p>
+    </div>
+	<!-- Верхнее меню сайта -->
+    <div id="menu-top">
+        <div class="bg-1">
+            <ul>
+            <li><a href="index.html">О нас</a></li>
+            <li><a href="coffee.html">Ассортимент</a></li>
+            <li><a href="order.html">Оформить заказ</a></li>
+            </ul>
+        </div>
+        <div class="bg-2"></div>
+    </div>
+	<!-- Левое меню и Контент -->
+            <div id="content">
+             
+            <!-- Контент - правый блок -->
+            <div class="right">
+                <h1>Кофе Кон Панна</h1>
+				<h3>250 мл</br>
+				<div class="container">
+                <div class="box">
+                <div>Стоимость:</div>
+                <div id="price">200</div>
+                <div>руб.</div><h3>
+                </div>
+                </div>
+                <h3><i>Кофе кон панна, или, как его чаще называют, эспрессо кон панна – это кофе со взбитыми сливками по-итальянски. Ближайший родственник напитка – кофе по-венски.</h3></i>
+ 
+                <h3><i>В переводе с итальянского con panna означает «со сливками»). Для того, чтобы взбить сливки до крутых пиков, не имея под рукой миксера, нужно хорошенько потрудиться. Поэтому в XVII–XVIII веках кофе кон панна могли себе позволить только зажиточные итальянцы.</h3></i>
+                 
+				<h3><i>С изобретением в XX веке кофемашин и электрических приспособлений, позволяющих быстро взбить сливки в крутую пену, кон панна стало готовить намного легче, и он появился в меню даже самых недорогих заведений. Но если в прежние времена безразлично было, каким образом сварена кофейная основа, то с середины XX века и до сегодняшнего дня напиток делают только с эспрессо. Появился даже термин «эспрессо кон панна».</h3></i>
+				 
+                <img src="images/konpanna.jpg" alt="" title="" style="margin-right:60px;" />
+                <img src="images/konpanna1.jpg" alt="" title="" style="margin-right:60px;" />
+                <img src="images/konpanna2.jpg" alt="" title="" />
+				
+				<h3><i>Эспрессо кон панна легко отличить от кофе по-венски:<br/>
+				1. Кофе по-венски принято готовить на основе чёрного кофе, сваренного любым способом. Настоящий кон панна делают исключительно с эспрессо;<br/>
+				2. Сливки для кофе по-венски взбивают до состояния гладкой, эластичной пены, которую можно пить, одновременно ощущая во рту кофейную горечь и нежную сливочную сладость. Кофе кон панна украшают шапкой сливок, взбитых в крутую пену, до устойчивых пиков. Кон панна нельзя пить вместе с пеной: её сперва нужно съесть ложечкой, а потом запить кофе;<br/>
+				3. Кон панна австрийцы именуют францисканером. Дело в том, что капуцины – простонародное прозвище монахов из ордена францисканцев. По логике австрийцев, если итальянский кофе с молоком – капучино, то более аристократичный напиток со сливками – францисканер.</h3></i>
+ 
+                <h3><i>Кон панна подают в толстостенных керамических чашках – демитассе, или прозрачных стаканах. Гостю обязательно предлагают ложечку. Если кофе не подслащён заранее, можно подать сахарницу или стикер сахара.</h3></i>
+				
+				<h3><i>Кофе кон панна хорошо сочетается с песочным ореховым печеньем, шоколадом. Из десертов предпочтительнее фруктово-ягодные желе.</h3></i>
+				
+				<h3><i>Напиток отнюдь не диетический, поэтому тем, кто следит за фигурой, после кон панна придётся отказаться от равноценного по калорийности блюда или вообще от ужин.</h3></i>
+				
+				<script type="text/javascript">
+				function change(objName, min, max, step) {
+                var obj = document.getElementById(objName);
+                var tmp = +obj.value + step;
+                if (tmp<min) tmp=min;
+                if (tmp>max) tmp=max;
+                obj.value = tmp;
+                } 
+				$(document).ready(function(){
+                $("btn-default").click(function(){
+                id = $(this).attr("el");
+                tmp="#img"+id;
+                $(tmp)
+                .clone()
+                .css({'position' : 'absolute', 'z-index' : '11100', top: $(this).offset().top-300, left:$(this).offset().left-100})
+                .appendTo("body")
+                .animate({opacity: 0.5,
+                    left: $("#popup_basket").offset()['left'],
+                    top: $("#popup_basket").offset()['top'],
+                    width: 20}, 1000, function() {
+                    $(this).remove();
+                });
+                })
+                });
+				</script>
+				
+				<form>
+                <div id="shopping-cart">
+                <input id="amount" ENGINE="text" name="count" value="1" class="form-control form-number ">
+                <div class="btn-count btn-count-plus" value="+" onClick="change('amount',0,100, 1);">+</div>
+                <div class="btn-count btn-count-minus" value="-" onClick="change('amount',0,100,-1);">-</div>
+                </div>
+                <a href="#" class="btn-default">Купить</a>
+                </form>
+				<a href="coffee.html" class="btn-default">Обратно в меню</a>
+            </div>
+             
+            <!-- Левое меню - левый блок -->
+            <div class="left">
+                <div id="left-menu">
+                    <div class="block-nad-menu"></div>
+                    <div class="block-menu">
+                    <ul>
+                    <li><a href="ayrish.html">Кофе Айриш</a></li>
+                    <li><a href="americano.html">Кофе Американо</a></li>
+                    <li><a href="glyase.html">Кофе Глясе</a></li>
+                    <li><a href="doppio.html">Кофе Доппио</a></li>
+                    <li><a href="cappuccino.html">Кофе Капучино</a></li>
+                    <li><a href="konpanna.html">Кофе Кон Панна</a></li>
+                    <li><a href="koretto.html">Кофе Коретто</a></li>
+                    <li><a href="latte.html">Кофе Латте</a></li>
+                    <li class="none-bg"><a href="lungo.html">Кофе Лунго</a></li>
+                    </ul>
+                    </div>
+                    <div class="block-pod-menu"></div>
+                </div>
+            </div>
+			<div class="myclr"></div>
+        </div>
+		<!-- Подвал -->
+        <div id="podval">
+            <div class="yellow"></div>
+            <div class="p1"><i>ООО “Кофейня” <br/>
+            г. Верхняя Салда, ул. Энгельса, 97 <br/>
+			2021 год</i></div>
+			<div class="p2"><i>Контактный телефон:<br/>
+			+7 (950) 196-73-83<br/>
+			Часы работы:<br/>
+			Пн-пт: 9:00-19:00<br/>
+			Сб-вс: 10:00-18:00</i></div>
+            <div class="p3"><img src="images/icon.png" alt="" title="" /></div>
+        </div>
+        <div class="myclr"></div>
+    </div>	
+</body>
+</html>

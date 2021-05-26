@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Официальный сайт кофейни "Восход"</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="js/button.js"></script>
+</head>
+<body>
+ <!-- Основной блок сайта -->
+    <div id="basic">
+     <!-- Шапка сайта -->
+    <div id="head-site">
+    <a href="/"><img src="images/logo.jpg" alt="Кофейня" title="Кофейня" /></a>
+	<div class="slogan">
+	<p><i>Начни свой день правильно!</i></p>
+    </div>
+	<!-- Верхнее меню сайта -->
+    <div id="menu-top">
+        <div class="bg-1">
+            <ul>
+            <li><a href="index.html">О нас</a></li>
+            <li><a href="coffee.html">Ассортимент</a></li>
+            <li><a href="order.html">Оформить заказ</a></li>
+            </ul>
+        </div>
+        <div class="bg-2"></div>
+    </div>
+	<!-- Левое меню и Контент -->
+            <div id="content">
+             
+            <!-- Контент - правый блок -->
+            <div class="right">
+                <h1>Кофе Капучино</h1>
+				<h3>250 мл</br>
+				<div class="container">
+                <div class="box">
+                <div>Стоимость:</div>
+                <div id="price">110</div>
+                <div>руб.</div><h3>
+                </div>
+                </div>
+                <h3><i>“Капучино – это влюбленность. Сначала терпко, а потом сладко и легко. А на поверку – все та же жизнь”. Узнаете цитату из “Кофейной книги” Макса Фрая? Капучино, действительно, такой. Немного горький, но больше сладкий и мягкий. Не зря этот рецепт кофе по популярности догоняет эспрессо. В статье поделимся интересными фактами о капучино и расскажем, как приготовить его правильно.</h3></i>
+ 
+                <h3><i>Появился капучино в Италии, на родине большинства кофейных напитков. Его отличительная черта – наличие пышной молочной пенки на поверхности чашки. Молоко смягчает вкус кофе, делает его не таким крепким.</h3></i>
+                 
+                <img src="images/cappuccino.jpg" alt="" title="" style="margin-right:30px;" />
+                <img src="images/cappuccino1.jpg" alt="" title="" style="margin-right:30px;" />
+                <img src="images/cappuccino2.jpg" alt="" title="" />
+ 
+                <h3><i>Название напитка связано с орденом капуцинов – монахов, носивших рясы красно-коричневого цвета. Почти в каждой статье о капучино вы прочитаете, что у рясы был белый капюшон, напоминающий белую пенку на кофе. Однако капюшон у рясы был коричневым, просто первый рецепт капучино отличался от того, что мы пьем сейчас. Сначала напиток готовили с небольшим добавлением молока. И слегка разбавленный кофе становился похож по цвету на монашеские одеяния.</h3></i>
+ 
+                <h3><i>Позже в кофе начали добавлять молочную пену, которую сначала взбивали вручную. Затем появился первый прообраз капучинатора из двух емкостей. В одной нагревалась вода, во вторую с молоком по трубочкам поступал пар, что приводило к появлению густой пенки. Еще позже изобрели первую кофемашину, молоко стали взбивать её паром.</h3></i>
+				
+				<h3><i>Традиционно капучино подают в керамической подогретой чашке объемом около 180-200 мл, пенка должна быть на уровне ее края. В Италии кофейную чашку с утолщенными стенками называют тацца.</h3></i>
+				
+				<h3><i>Капучино подают сразу после приготовления, постоявший напиток расслаивается и теряет вкусовые качества. Его пьют без сахара, достаточно естественной сладости за счет молочных сахаров.</h3></i>
+				
+				<script type="text/javascript">
+				function change(objName, min, max, step) {
+                var obj = document.getElementById(objName);
+                var tmp = +obj.value + step;
+                if (tmp<min) tmp=min;
+                if (tmp>max) tmp=max;
+                obj.value = tmp;
+                } 
+				$(document).ready(function(){
+                $("btn-default").click(function(){
+                id = $(this).attr("el");
+                tmp="#img"+id;
+                $(tmp)
+                .clone()
+                .css({'position' : 'absolute', 'z-index' : '11100', top: $(this).offset().top-300, left:$(this).offset().left-100})
+                .appendTo("body")
+                .animate({opacity: 0.5,
+                    left: $("#popup_basket").offset()['left'],
+                    top: $("#popup_basket").offset()['top'],
+                    width: 20}, 1000, function() {
+                    $(this).remove();
+                });
+                })
+                });
+				</script>
+				
+				<form>
+                <div id="shopping-cart">
+                <input id="amount" ENGINE="text" name="count" value="1" class="form-control form-number ">
+                <div class="btn-count btn-count-plus" value="+" onClick="change('amount',0,100, 1);">+</div>
+                <div class="btn-count btn-count-minus" value="-" onClick="change('amount',0,100,-1);">-</div>
+                </div>
+                <a href="#" class="btn-default">Купить</a>
+                </form>
+				<a href="coffee.html" class="btn-default">Обратно в меню</a>
+            </div>
+             
+            <!-- Левое меню - левый блок -->
+            <div class="left">
+                <div id="left-menu">
+                    <div class="block-nad-menu"></div>
+                    <div class="block-menu">
+                    <ul>
+                    <li><a href="ayrish.html">Кофе Айриш</a></li>
+                    <li><a href="americano.html">Кофе Американо</a></li>
+                    <li><a href="glyase.html">Кофе Глясе</a></li>
+                    <li><a href="doppio.html">Кофе Доппио</a></li>
+                    <li><a href="cappuccino.html">Кофе Капучино</a></li>
+                    <li><a href="konpanna.html">Кофе Кон Панна</a></li>
+                    <li><a href="koretto.html">Кофе Коретто</a></li>
+                    <li><a href="latte.html">Кофе Латте</a></li>
+                    <li class="none-bg"><a href="lungo.html">Кофе Лунго</a></li>
+                    </ul>
+                    </div>
+                    <div class="block-pod-menu"></div>
+                </div>
+            </div>
+			<div class="myclr"></div>
+        </div>
+		<!-- Подвал -->
+        <div id="podval">
+            <div class="yellow"></div>
+            <div class="p1"><i>ООО “Кофейня” <br/>
+            г. Верхняя Салда, ул. Энгельса, 97 <br/>
+			2021 год</i></div>
+			<div class="p2"><i>Контактный телефон:<br/>
+			+7 (950) 196-73-83<br/>
+			Часы работы:<br/>
+			Пн-пт: 9:00-19:00<br/>
+			Сб-вс: 10:00-18:00</i></div>
+            <div class="p3"><img src="images/icon.png" alt="" title="" /></div>
+        </div>
+        <div class="myclr"></div>
+    </div>	
+</body>
+</html>

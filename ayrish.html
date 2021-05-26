@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Официальный сайт кофейни "Восход"</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/button.js" defer></script>
+</head>
+<body>
+    <!-- Основной блок сайта -->
+    <div id="basic">
+        <!-- Шапка сайта -->
+        <div id="head-site">
+            <a href="/"><img src="images/logo.jpg" alt="Кофейня" title="Кофейня" /></a>
+            <div class="slogan">
+                <p><i>Начни свой день правильно!</i></p>
+            </div>
+            <!-- Верхнее меню сайта -->
+            <div id="menu-top">
+                <div class="bg-1">
+                    <ul>
+                        <li><a href="index.html">О нас</a></li>
+                        <li><a href="coffee.html">Ассортимент</a></li>
+                        <li><a href="order.html">Оформить заказ</a></li>
+                    </ul>
+                </div>
+                <div class="bg-2"></div>
+            </div>
+            <!-- Левое меню и Контент -->
+            <div id="content">
+
+                <!-- Контент - правый блок -->
+                <div class="right">
+                    <h1>Кофе Айриш</h1>
+					<h3>250 мл</br>
+				    <div class="container">
+                    <div class="box">
+                    <div>Стоимость:</div>
+                    <div id="price">220</div>
+                    <div>руб.</div><h3>
+                    </div>
+                    </div>
+                    <h3><i>Айриш кофе или кофе по-ирландски (в некоторых источниках — ирландский кофе) один из самых
+                            известных в мире кофейно-алкогольных коктейлей. Он входит в список официальных коктейлей
+                            Международной ассоциации барменов. Оригинальный рецепт и вкус коктейля претерпевает
+                            метаморфозы в разных странах и получает необычные вкусовые интерпретации в руках опытных
+                            барменов и бариста. В его состав входят такие ингридиенты, как жаркий кофе, хороший
+                            ирландский виски, сахар, а так же взбитые сливки.</i></h3>
+
+                    <h3><i>Известно множество небылиц о происхождении ирландского кофе. Наиболее правдоподобная версия
+                            приписывает коктейль Джо Шеридану, главному шеф-повару ресторана Flying Boat в одном из
+                            терминалов аэропорта в Фойнсе, графство Лимерик в начале 1940-х гг.</i></h3>
+
+                    <img src="images/ayrish.jpg" alt="" title="" style="margin-right:40px;" />
+                    <img src="images/ayrish1.jpg" alt="" title="" style="margin-right:40px;" />
+                    <img src="images/ayrish2.jpg" alt="" title="" />
+
+                    <h3><i>Однажды поздней ночью зимой 1943 года самолет вылетел из Фойнса в Нью-Йорк. Спустя нескольких
+                            часов полета в плохую погоду капитан решил вернуться в Фойнс, чтобы дождаться более
+                            безопасных условий. Сообщение азбукой Морзе было отправлено в диспетчерскую Фойнса, чтобы
+                            предупредить о возвращении. Персонал вызвали обратно, а пассажиров после посадки разместили
+                            в ресторане. Когда Джо попросили приготовить что-нибудь особенное, чтобы согреть усталых
+                            пассажиров, он с воодушевлением добавил им в кофе хорошего ирландского виски. Один пассажир
+                            подошел к нему и поблагодарил за чудесный кофе, спросив, использует ли он бразильский кофе?
+                            Джо шутливо ответил: «Нет, это был ирландский кофе!»</i></h3>
+
+                    <h3><i>Несколько недель спустя шеф Шеридан постучал в дверь кабинета начальника и показал ему свой
+                            новый напиток в бокале на ножке, спросив: «Как насчет такого варианта?» Начальник ответил:
+                            «Гениально, шеф!» Так родился ирландский кофе, который продолжают подавать пассажирам в
+                            Фойнсе до сих пор.</i></h3>
+
+                    <h3><i>Напиток очень калориен и содержит довольно много алкоголя, что нужно учитывать тем, кто
+                            следит за фигурой. Молодым людям до 18 лет пить айриш кофе нельзя. Коктейль противопоказан
+                            при нарушениях сердечно-сосудистой системы, диабете, обострении заболеваний ЖКТ. После
+                            употребления кофе по-ирландски запрещается садиться за руль транспортного средства!</i></h3>
+
+                    <script type="text/javascript">
+                        function change(objName, min, max, step) {
+                            var obj = document.getElementById(objName);
+                            var tmp = +obj.value + step;
+                            if (tmp < min) tmp = min;
+                            if (tmp > max) tmp = max;
+                            obj.value = tmp;
+                        }
+                        $(document).ready(function () {
+                            $("btn-default").click(function () {
+                                id = $(this).attr("el");
+                                tmp = "#img" + id;
+                                $(tmp)
+                                    .clone()
+                                    .css({ 'position': 'absolute', 'z-index': '11100', top: $(this).offset().top - 300, left: $(this).offset().left - 100 })
+                                    .appendTo("body")
+                                    .animate({
+                                        opacity: 0.5,
+                                        left: $("#popup_basket").offset()['left'],
+                                        top: $("#popup_basket").offset()['top'],
+                                        width: 20
+                                    }, 1000, function () {
+                                        $(this).remove();
+                                    });
+                            })
+                        });
+                    </script>
+                    <form>
+                        <div id="shopping-cart">
+                            <input id="amount" ENGINE="text" name="count" value="1" class="form-control form-number ">
+                            <div class="btn-count btn-count-plus" value="+" onClick="change('amount',0,100, 1);">+</div>
+                            <div class="btn-count btn-count-minus" value="-" onClick="change('amount',0,100,-1);">-
+                            </div>
+                        </div>
+                        <a href="#" class="btn-default">Купить</a>
+                    </form>
+					<a href="coffee.html" class="btn-default">Обратно в меню</a>
+                </div>
+
+                <!-- Левое меню - левый блок -->
+                <div class="left">
+                    <div id="left-menu">
+                        <div class="block-nad-menu"></div>
+                        <div class="block-menu">
+                            <ul>
+                                <li><a href="ayrish.html">Кофе Айриш</a></li>
+                                <li><a href="americano.html">Кофе Американо</a></li>
+                                <li><a href="glyase.html">Кофе Глясе</a></li>
+                                <li><a href="doppio.html">Кофе Доппио</a></li>
+                                <li><a href="cappuccino.html">Кофе Капучино</a></li>
+                                <li><a href="konpanna.html">Кофе Кон Панна</a></li>
+                                <li><a href="koretto.html">Кофе Коретто</a></li>
+                                <li><a href="latte.html">Кофе Латте</a></li>
+                                <li class="none-bg"><a href="lungo.html">Кофе Лунго</a></li>
+                            </ul>
+                        </div>
+                        <div class="block-pod-menu"></div>
+                    </div>
+                </div>
+                <div class="myclr"></div>
+            </div>
+            <!-- Подвал -->
+            <div id="podval">
+                <div class="yellow"></div>
+                <div class="p1"><i>ООО “Кофейня” <br />
+                        г. Верхняя Салда, ул. Энгельса, 97 <br />
+                        2021 год</i></div>
+                <div class="p2"><i>Контактный телефон:<br />
+                        +7 (950) 196-73-83<br />
+                        Часы работы:<br />
+                        Пн-пт: 9:00-19:00<br />
+                        Сб-вс: 10:00-18:00</i></div>
+                <div class="p3"><img src="images/icon.png" alt="" title="" /></div>
+            </div>
+            <div class="myclr"></div>
+        </div>
+    </body>
+
+</html>
